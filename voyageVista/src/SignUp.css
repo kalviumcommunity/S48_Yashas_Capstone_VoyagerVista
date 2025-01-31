@@ -1,0 +1,126 @@
+/* Signup.css */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+/* Header */
+.signup-header {
+  background-color: #03375e;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-left h1 {
+  font-family: 'Alex Brush', cursive;
+  font-size: 36px;
+  margin: 0;
+}
+
+.header-left p {
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+  margin-right: 40px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  background-color: #0096c7;
+}
+
+.login-btn {
+  background-color: #0096c7;
+}
+
+/* Image Section */
+.signup-image-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-top: 90px; /* 30px distance from the header */
+}
+
+.signup-temple-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Signup Form */
+.signup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px; /* Increased padding for better spacing */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 0400px;
+  text-align: center;
+}
+
+.signup-content h2 {
+  color: #023e8a;
+  margin-bottom: 10px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px; /* Increased margin below labels */
+  color: #014F86;
+  font-size: 1rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px; /* Increased padding inside inputs */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+
+
+.login-redirect {
+  margin-top: 15px;
+  color: #014F86;
+}
+
+.login-redirect a {
+  color: #0096c7;
+  text-decoration: none;
+}
