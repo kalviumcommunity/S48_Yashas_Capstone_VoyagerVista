@@ -12,20 +12,15 @@ const Login = () => {
     const password = e.target.password.value;
 
     try {
-      const response = await fetch("http://localhost:5000/api/users/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
-      const text = await response.text();
-      const data = text ? JSON.parse(text) : {};
-
-      if (response.ok) {
-        console.log("Login successful", data);
-        navigate("/web"); // Redirect as needed
+      const response = await fetch("http://localhost:5001/api/users/get");
+      const users = await response.json();
+      const user = users.find(u => u.email === email && u.password === password);
+      if (user) {
+        console.log("Login successful", user);
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
+        navigate("/profile");
       } else {
-        console.error("Login error:", data.message || response.statusText);
-        alert(data.message || response.statusText);
+        alert("Invalid email or password");
       }
     } catch (error) {
       console.error("Error during login:", error);
@@ -58,6 +53,9 @@ const Login = () => {
             <div className="form-group">
               <label htmlFor="password">Password</label>
               <input type="password" id="password" name="password" placeholder="Enter your password" required />
+            </div>
+            <div style={{ textAlign: 'right', marginBottom: 12 }}>
+              <Link to="/forgot-password" style={{ fontSize: '0.95rem', color: '#4a90e2', textDecoration: 'underline' }}>Forgot Password?</Link>
             </div>
             <button type="submit" className="btn login-submit-btn">Login</button>
           </form>
