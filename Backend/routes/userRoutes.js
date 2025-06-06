@@ -11,19 +11,19 @@ const {
 const router = express.Router();
 
 // GET all users (for admin purposes)
-router.get("/", getUsers);
+router.get("/get", getUsers);
 
 // GET a single user by ID
-router.get("/:id", getUserById);
+router.get("/get/:id", getUserById);
 
 // POST a new user (signup)
-router.post("/", createUser);
+router.post("/create", createUser);
 
 // PUT update a user
-router.put("/:id", updateUser);
+router.put("/update/:id", updateUser);
 
 // DELETE a user
-router.delete("/:id", deleteUser);
+router.delete("/delete/:id", deleteUser);
 
 // POST login route
 router.post("/login", loginUser);

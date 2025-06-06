@@ -15,7 +15,7 @@ const Web = () => {
         </div>
         <div className="header-right">
           <Link to="/signup" className="btn signup-btn">Know More About Us</Link>
-          <Link to="/login" className="btn login-btn">Your Profile</Link>
+          <Link to="/profile" className="btn login-btn">Your Profile</Link>
         </div>
       </header>
       {/* Image Section */}
